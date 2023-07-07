@@ -23,12 +23,21 @@ main {
    flex-direction: column;
    align-items: center;
 }
-
+.start-btn{
+   padding: 2rem 4rem;
+   font-size: 3rem;
+   background-color: blue;
+   color: #fff;
+   margin-bottom: 2rem;
+   box-shadow: 0.5rem 0.5rem 0.5rem black;
+   font-family: 'Press Start 2P', cursive;
+   cursor: pointer;
+}
 #level-title {
    font-family: 'Press Start 2P', cursive;
    font-size: 3rem;
    line-height: 4rem;
-   margin-bottom: 6rem;
+   margin-bottom: 3rem;
    color: #fef2bf;
 }
 .sub-title {

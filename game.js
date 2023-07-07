@@ -1,3 +1,4 @@
+const startBtn = document.querySelector('.start-btn');
 const buttonColour = ['red', 'blue', 'green', 'yellow'];
 let gamePattern = [];
 let userClickedPattern = [];
@@ -7,7 +8,7 @@ let keyPressNum = 1;
 /* Restart the game after every key press. If gamePattern is empty call nextSequence
 if gamePattern is not empty reset it to empty, reset userClickedPattern to empty, 
 reset level to 0, before calling nextSequence */
-$(document).keypress(function () {
+$(startBtn).on('click', function () {
    if (gamePattern.length === 0) {
       nextSequence();
    } else {
@@ -44,9 +45,8 @@ function animatePress(currentColour) {
 /*sets game over text and plays game over sound 
 and end the game by not calling nextSequence()*/
 function gameOVER() {
-   let str = 'GAME OVER, \n t';
    $('h1').html(
-      '<span>Game Over<br><span class="sub-title">Press any key to restart</span></span>'
+      '<span>Game Over<br></span>'
    );
    let makeSound = new Audio(`sounds/wrong.mp3`);
    makeSound.play();
